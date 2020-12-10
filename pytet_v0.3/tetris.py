@@ -136,7 +136,7 @@ class Tetris():
                 self.idxBlockDegree = (self.idxBlockDegree - 1) % Tetris.nBlockDegrees
             elif key == ' ':
                 self.top -= 1
-                self.state = TetrixState.NewBlock
+                self.state = TetrisState.NewBlock
 
         self.currBlk = Matrix(Tetris.setOfBlockObjects[self.idxBlockType][self.idxBlockDegree])
         self.tempBlk = self.iScreen.clip(self.top, self.left, self.top + self.currBlk.get_dy(), self.left + self.currBlk.get_dx())
